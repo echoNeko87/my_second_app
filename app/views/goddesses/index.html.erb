@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Goddesses</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Pantheon</th>
+      <th>Other</th>
+      <th>Info</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @goddesses.each do |goddess| %>
+      <tr>
+        <td><%= goddess.Name %></td>
+        <td><%= goddess.Pantheon %></td>
+        <td><%= goddess.Other %></td>
+        <td><%= goddess.Info %></td>
+        <td><%= link_to 'Show', goddess %></td>
+        <td><%= link_to 'Edit', edit_goddess_path(goddess) %></td>
+        <td><%= link_to 'Destroy', goddess, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Goddess', new_goddess_path %>

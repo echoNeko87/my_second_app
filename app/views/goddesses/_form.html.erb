@@ -1,0 +1,32 @@
+<%= form_with(model: goddess, local: true) do |form| %>
+  <% if goddess.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(goddess.errors.count, "error") %> prohibited this goddess from being saved:</h2>
+
+      <ul>
+      <% goddess.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Name %>
+    <%= form.text_field :Name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Pantheon %>
+    <%= form.text_field :Pantheon %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Other %>
+    <%= form.text_field :Other %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

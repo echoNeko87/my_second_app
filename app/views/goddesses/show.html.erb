@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @goddess.Name %>
+</p>
+
+<p>
+  <strong>Pantheon:</strong>
+  <%= @goddess.Pantheon %>
+</p>
+
+<p>
+  <strong>Other:</strong>
+  <%= @goddess.Other %>
+</p>
+
+<p>
+  <strong>Info:</strong>
+  <%= @goddess.Info %>
+</p>
+
+<%= link_to 'Edit', edit_goddess_path(@goddess) %> |
+<%= link_to 'Back', goddesses_path %>
